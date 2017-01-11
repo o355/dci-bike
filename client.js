@@ -18,7 +18,7 @@ sock.on('close', function done () {
 
 process.stdin.on('end', function () {
   sock.destroy()
-  console.log()
+  console.log("Socket Server was closed")
 })
 
 process.stdin.on('data', function (b) {
