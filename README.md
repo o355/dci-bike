@@ -1,7 +1,7 @@
 # DCI Electric Bike
 Let me explain.
 
-# WHA????
+# WHAT???
 A class of 9th and 10th graders decided...let's do something that involves computers, building, computers, more computers, lots of computers, and requires 4 hex bits to complete (because some people love stripping bits!). The result, an electrical bike.
 
 # The concept
@@ -20,5 +20,5 @@ It would consist of a few parts.
 * This isn't the actual in-production code. I don't feel like giving free SQL databases for the internet to use.
 * Some code is censored, to not give away private information. Sorry!
 
-# Why Python?
-* Because. If we need to switch to a different language, SURE THING!
+# Why Socket Servers?
+* We use the socket servers because they are easy to setup and monitor data.
