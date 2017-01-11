@@ -1,5 +1,3 @@
-const msg = 'message':
-let connections = 0;
 var repl = require('repl')
 var net = require('net')
 
