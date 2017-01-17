@@ -1,28 +1,29 @@
-var net = require('net')
+var net = require('net');
+var HOST = '127.0.0.1';
+var PORT = 8088;
 
-var sock = net.connect(8088)
 
-process.stdin.pipe(sock)
-sock.pipe(process.stdout)
+var client = new net.Socket
+client.connect( PORT, HOST, function () {
+  
+   console.log('BIKE # CONNECTED TO: ' + HOST + ':' + PORT);
+  //write message here
+  client.write('Bike # is now ready to transfer data');
+  
+});
 
-sock.on('connect', function () {
-  process.stdin.resume();
-  process.stdin.setRawMode(true)
-})
+client.on('data', function(data) {
+  console.log('DATA ' + data );
+    client.destroy();
+});
 
-sock.on('close', function done () {
-  process.stdin.setRawMode(false)
-  process.stdin.pause()
-  sock.removeListener('close', done)
-})
+client.on('close', function() {
+    console.log('Connection closed');
+});
 
-process.stdin.on('end', function () {
-  sock.destroy()
-  console.log("Socket Server was closed")
-})
-
-process.stdin.on('data', function (b) {
-  if (b.length === 1 && b[0] === 4) {
-    process.stdin.emit('end')
-  }
-})
+client.on('reconnect' function() {
+    client.connect( PORT, HOST, function () {
+      console.log('BIKE # RECONNECTED TO: ' + HOST + ':' + PORT);
+      //write message here 
+      client.write('Bike # is now reconnected and ready to transfer data');
+});
