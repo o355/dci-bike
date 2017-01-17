@@ -20,5 +20,5 @@ It would consist of a few parts.
 * This isn't the actual in-production code. I don't feel like giving free SQL databases for the internet to use.
 * Some code is censored, to not give away private information. Sorry!
 
-# Why Python?
-* Because. If we need to switch to a different language, SURE THING!
+# Where's all the code?
+* In branches, you silly! The socket branch contains the socket server/client, and the front-end branch is where the GUI goes. Myself, o355 (owen), codes the front end, and Bench (max) codes the back-end (the socket server goooodness).
