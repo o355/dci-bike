@@ -17,9 +17,5 @@ while True:
     elif ml_input == "2":
         print("Register option goes here")
     elif ml_input == "3":
-        print("i don't hate you")
-        sys.exit()
-    else:
-        print("this was a trimuph.")
-        print("i'm making a note here, not enough time to code.")
+        print("Shutdown!")
         sys.exit()
