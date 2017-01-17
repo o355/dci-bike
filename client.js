@@ -1,6 +1,6 @@
 var net = require('net')
 
-var sock = net.connect(1337)
+var sock = net.connect(8088)
 
 process.stdin.pipe(sock)
 sock.pipe(process.stdout)
