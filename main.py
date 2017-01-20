@@ -1,6 +1,8 @@
 # (c) 2017 o355
 # Licensed under the GNU GPL 3.0
 
+import mysql.connector
+
 print("Welcome to the bike.")
 print("Please select an option before getting started.")
 print("0 - Start a ride, 1 - View stats")
