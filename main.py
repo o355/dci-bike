@@ -10,7 +10,7 @@ print("Welcome to Bike #")
 
 while True:
     print("Please input an option as to what you want to do:")
-    print("1 - Log in. 2 - Register. 3 - the cake is a lie")
+    print("1 - Log in. 2 - Register. 3 - Shutdown!")
     ml_input = input("Enter your option here: ").lower()
     if ml_input == "1":
         print("Log in option goes here")
@@ -19,3 +19,4 @@ while True:
     elif ml_input == "3":
         print("Shutdown!")
         sys.exit()
+        
