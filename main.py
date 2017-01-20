@@ -1,25 +1,22 @@
-# (c) 2017 o355, Benchmaker
-# Licensed under the GNU GPL 3.0 License
-# Originally found at github.com/o355/dci-bike
-# Benchmaker was singing all the time when I was coding
-# He just kept singing Portal
-# ;)
+# (c) 2017 o355
+# Licensed under the GNU GPL 3.0
 
-import sys
-print("Welcome to Bike #")
+print("Welcome to the bike.")
+print("Please select an option before getting started.")
+print("0 - Start a ride, 1 - View stats")
+optselect = input("Select an option: ")
 
-while True:
-    print("Please input an option as to what you want to do:")
-    print("1 - Log in. 2 - Register. 3 - the cake is a lie")
-    ml_input = input("Enter your option here: ").lower()
-    if ml_input == "1":
-        print("Log in option goes here")
-    elif ml_input == "2":
-        print("Register option goes here")
-    elif ml_input == "3":
-        print("i don't hate you")
-        sys.exit()
-    else:
-        print("this was a trimuph.")
-        print("i'm making a note here, not enough time to code.")
-        sys.exit()
+if optselect == "0":
+    print("Starting a ride.")
+    # code goes here
+elif optselect == "1":
+    print("Total stats...")
+    # sql code goes hererererererere
+elif optselect == "hiddenmenu":
+    print("Welcome to the hidden menu. Please enter the password to log in.")
+    hiddenpwd = input("Input here: ")
+    if hiddenpwd == "thisbikeisprettyamazing!":
+        print("Hidden menu...")
+        print("Select an option. (0) - Update,")
+        hiddenselect = input("Select an option:")
+    
