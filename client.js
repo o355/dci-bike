@@ -1,29 +1,11 @@
-var net = require('net');
-var HOST = '127.0.0.1';
-var PORT = 8088;
+const net = require('net');
 
 
-var client = new net.Socket
-client.connect( PORT, HOST, function () {
-  
-   console.log('BIKE # CONNECTED TO: ' + HOST + ':' + PORT);
-  //write message here
-  client.write('Bike # is now ready to transfer data');
-  
+
+console.log('Now connecting to Server!');
+const client = net.connect({port: 8088}, () = {
+  console.log('Now connected to the Server!');
+  client.write('I have now connected!');
 });
 
-client.on('data', function(data) {
-  console.log('DATA ' + data );
-    client.destroy();
-});
-
-client.on('close', function() {
-    console.log('Connection closed');
-});
-
-client.on('reconnect' function() {
-    client.connect( PORT, HOST, function () {
-      console.log('BIKE # RECONNECTED TO: ' + HOST + ':' + PORT);
-      //write message here 
-      client.write('Bike # is now reconnected and ready to transfer data');
-});
+client.on
