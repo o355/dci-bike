@@ -2,7 +2,7 @@ from appJar import gui
 
 # create the GUI & set a title
 app = gui("Login to DCI-Bike 1!")
-.showSplash(text, fill='red', stripe='black', fg='white', font=44)
+app.showSplash(text, fill='red', stripe='black', fg='white', font=44)
 
 def press(btnName):
     if btnName == "Cancel":
@@ -12,6 +12,8 @@ def press(btnName):
     if app.getEntry("userEnt") == "testuser":
         if app.getEntry("passEnt") == "testpassword":
             app.infoBox("Success", "Congratulations, you are logged in!")
+            app.infoBox("Logging you in welcome user!")
+           
         else:
             app.errorBox("User login Failed!", "Invalid password")
     else:
@@ -29,3 +31,4 @@ app.addButtons( ["Submit", "Cancel"], press, colspan=2)
 
 # add some enhancements
 app.setFocus("userEnt")
+app.go
