@@ -1,24 +1,21 @@
 # (c) 2017 o355
 # Licensed under the GNU GPL 3.0
 
-import mysql.connector
+from appJar import gui
 
-print("Welcome to the bike.")
-print("Please select an option before getting started.")
-print("0 - Start a ride, 1 - View stats")
-optselect = input("Select an option: ")
+app = gui("Bike")
 
-if optselect == "0":
-    print("Starting a ride.")
-    # code goes here
-elif optselect == "1":
-    print("Total stats...")
-    # sql code goes hererererererere
-elif optselect == "hiddenmenu":
-    print("Welcome to the hidden menu. Please enter the password to log in.")
-    hiddenpwd = input("Input here: ")
-    if hiddenpwd == "thisbikeisprettyamazing!":
-        print("Hidden menu...")
-        print("Select an option. (0) - Update,")
-        hiddenselect = input("Select an option:")
-    
+def loginbuttons(btnName):
+    username = app.getEntry("userEnt")
+    password = app.getEntry("passEnt")
+    print(username)
+    print(password)
+
+app.addLabel("title", "Welcome! Please login.", 0)
+app.addLabel("user", "Username:", 1, 0)
+app.addEntry("userEnt", 1, 1)
+app.addLabel("pass", "Password:", 2, 0)
+app.addEntry("passEnt", 2, 1)
+app.addButtons( ["Submit"], loginbuttons, colspan=2)
+
+app.go()
