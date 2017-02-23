@@ -1,7 +1,7 @@
 # DCI Electric Bike
 Let me explain.
 
-# WHA????
+# WHAT????
 A class of 9th and 10th graders decided...let's do something that involves computers, building, computers, more computers, lots of computers, and requires 4 hex bits to complete (because some people love stripping bits!). The result, an electrical bike.
 
 # The concept
